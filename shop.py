@@ -8,19 +8,19 @@ from selenium import webdriver
 driver = webdriver.Chrome(executable_path='C:/chromedriver.exe')
 driver.maximize_window()
 
-#1
-driver.get("http://practice.automationtesting.in")
-driver.implicitly_wait(5)
-
 '''Отображение страницы товара'''
 
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # my_account_menu = driver.find_element_by_id("menu-item-50").click()
 # email = driver.find_element_by_id("username")
 # email.send_keys("kalebor80@gmail.com")
 # password = driver.find_element_by_id("password")
 # password.send_keys("Abrakadabra1980!!!")
-# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "p>input[name='login']")) ).click()
+# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "p>input[name='login']")) ).click()
 # #3
 # shop = driver.find_element_by_id("menu-item-40").click()
 # #4
@@ -31,7 +31,10 @@ driver.implicitly_wait(5)
 
 '''Количество товаров в категории'''
 
-#2
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
+# #2
 # my_account_menu = driver.find_element_by_id("menu-item-50").click()
 # email = driver.find_element_by_id("username")
 # email.send_keys("kalebor80@gmail.com")
@@ -49,13 +52,17 @@ driver.implicitly_wait(5)
 
 '''Сортировка товара'''
 
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # my_account_menu = driver.find_element_by_id("menu-item-50").click()
 # email = driver.find_element_by_id("username")
 # email.send_keys("kalebor80@gmail.com")
 # password = driver.find_element_by_id("password")
 # password.send_keys("Abrakadabra1980!!!")
-# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "p>input[name='login']")) ).click()
+# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "p>input[name='login']")) ).click()
 # #3
 # shop = driver.find_element_by_id("menu-item-40").click()
 # #4
@@ -72,16 +79,20 @@ driver.implicitly_wait(5)
 # sort_by_value = sort_by.get_attribute("value")
 # if sort_by_value=="price-desc":
 #     print("Выбран вариант сортировки Sort by price: high to low")
-
-'''Отображение, скидка товара'''
-
+#
+# '''Отображение, скидка товара'''
+#
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # my_account_menu = driver.find_element_by_id("menu-item-50").click()
 # email = driver.find_element_by_id("username")
 # email.send_keys("kalebor80@gmail.com")
 # password = driver.find_element_by_id("password")
 # password.send_keys("Abrakadabra1980!!!")
-# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "p>input[name='login']")) ).click()
+# login = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "p>input[name='login']")) ).click()
 # #3
 # shop = driver.find_element_by_id("menu-item-40").click()
 # #4
@@ -95,12 +106,17 @@ driver.implicitly_wait(5)
 # new_price_text = new_price.text
 # assert new_price_text=="₹450.00"
 # #7
-# WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.images>a>img"))).click()
+# WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "div.images>a>img"))).click()
 # #8
-# WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.pp_close"))).click()
-
-'''Проверка цены в корзине'''
-
+# WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "a.pp_close"))).click()
+#
+# '''Проверка цены в корзине'''
+#
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # shop = driver.find_element_by_id("menu-item-40").click()
 # #3
@@ -121,9 +137,12 @@ driver.implicitly_wait(5)
 # #7
 # total = WebDriverWait(driver, 5).until(EC.text_to_be_present_in_element(
 #     (By.CSS_SELECTOR, "tr.order-total > td > strong > span"), "₹183.60"))
-
-'''Работа в корзине'''
-
+#
+# '''Работа в корзине'''
+#
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # shop = driver.find_element_by_id("menu-item-40").click()
 # #3
@@ -137,13 +156,15 @@ driver.implicitly_wait(5)
 # time.sleep(5)
 # del_book = driver.find_element_by_css_selector("tr:nth-child(1) > td.product-remove > a").click()
 # #6
-# undo = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div.woocommerce-message>a"))).click()
+# undo = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "div.woocommerce-message>a"))).click()
 # #7
 # clear = driver.find_element_by_css_selector("tr:nth-child(2) > td.product-quantity > div > input").clear()
 # quantity = driver.find_element_by_css_selector("tr:nth-child(2) > td.product-quantity > div > input")
 # quantity.send_keys("3")
 # #8
-# update = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "td > input.button"))).click()
+# update = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.CSS_SELECTOR, "td > input.button"))).click()
 # #9
 # time.sleep(3)
 # quantity_value = driver.find_element_by_css_selector("tr:nth-child(2) > td.product-quantity > div > input")
@@ -155,9 +176,12 @@ driver.implicitly_wait(5)
 # #11
 # error = WebDriverWait(driver, 5).until(EC.text_to_be_present_in_element(
 #     (By.CSS_SELECTOR, "ul.woocommerce-error > li"), "Please enter a coupon code."))
-
-'''Покупка товара'''
-
+#
+# '''Покупка товара'''
+#
+# #1
+# driver.get("http://practice.automationtesting.in")
+# driver.implicitly_wait(5)
 # #2
 # shop = driver.find_element_by_id("menu-item-40").click()
 # driver.execute_script("window.scrollBy(0, 300);")
@@ -170,7 +194,8 @@ driver.implicitly_wait(5)
 # proceed = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
 #     (By.CSS_SELECTOR, "div.wc-proceed-to-checkout>a"))).click()
 # #6
-# first_name = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "billing_first_name")))
+# first_name = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+#     (By.ID, "billing_first_name")))
 # first_name.send_keys("Demo")
 # last_name = driver.find_element_by_id("billing_last_name").send_keys("User")
 # email = driver.find_element_by_id("billing_email").send_keys("demo.user@gmail.com")
